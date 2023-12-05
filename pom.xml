@@ -11,6 +11,7 @@
     <modules>
         <module>kuoyio-dependencies</module>
         <module>kuoyio-core</module>
+        <module>kuoyio-component</module>
     </modules>
     <properties>
         <revision>1.0-SNAPSHOT</revision>
