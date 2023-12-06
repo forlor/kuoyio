@@ -1,0 +1,10 @@
+kuoyio:
+  data:
+    jdbc:
+      basePackages: com.kuoyio.component.datajdbc
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: xyz
+    password: ROOT950318root!
+    url: jdbc:mariadb://192.168.1.30:3306/xyz?characterEncoding=utf-8&useSSL=false&useTimezone=true
