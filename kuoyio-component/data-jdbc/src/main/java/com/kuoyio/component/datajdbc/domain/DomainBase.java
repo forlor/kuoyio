@@ -1,8 +1,11 @@
 package com.kuoyio.component.datajdbc.domain;
 
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.annotation.Version;
 import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.InsertOnlyProperty;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -14,8 +17,11 @@ import java.time.LocalDateTime;
 public class DomainBase<ID> implements Serializable {
     @Id
     private ID id;
+    @CreatedDate
     @Column("create_time")
+    @InsertOnlyProperty
     private LocalDateTime createTime;
+    @LastModifiedDate
     @Column("last_modified_time")
     private LocalDateTime lastModifiedTime;
     /**
@@ -50,6 +56,7 @@ public class DomainBase<ID> implements Serializable {
     public void setLastModifiedTime(LocalDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
     }
+
 
     public Integer getVersion() {
         return version;

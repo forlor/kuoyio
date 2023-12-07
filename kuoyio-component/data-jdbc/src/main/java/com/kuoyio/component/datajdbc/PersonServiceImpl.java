@@ -20,8 +20,10 @@ public class PersonServiceImpl {
     private PersonRepository personRepository;
     @PostConstruct
     public void init(){
-        Optional<Person> personOpt = personRepository.findById(125L);
+        Optional<Person> personOpt = personRepository.findById(180L);
         Person person = personOpt.get();
+       // Person person = new Person();
+       // person.setId(180L);
         person.setName("xyz124");
         person.setCreateTime(LocalDateTime.now());
         person.setInstant(Instant.now());

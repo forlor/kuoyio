@@ -1,6 +1,9 @@
 package com.kuoyio.component.datajdbc.domain;
 
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.InsertOnlyProperty;
 
 /**
  * @author xyz
@@ -8,8 +11,11 @@ import org.springframework.data.relational.core.mapping.Column;
  */
 public class DomainAuditable<ID, U> extends DomainBase<ID> {
     @Column("created_by")
+    @InsertOnlyProperty
+    @CreatedBy
     private U createdBy;
     @Column("last_modified_by")
+    @LastModifiedBy
     private U lastModifiedBy;
 
     public U getCreatedBy() {
