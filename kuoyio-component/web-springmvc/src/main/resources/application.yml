@@ -1,0 +1,7 @@
+kuoyio:
+  mvc:
+    path-prefix:
+      app-api:
+        - "**.com.abc"
+      xyz-api:
+        - "sss"
