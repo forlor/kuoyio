@@ -4,20 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.kuoyio</groupId>
-        <artifactId>kuoyio</artifactId>
+        <groupId>com.kuoyio.component</groupId>
+        <artifactId>kuoyio-component</artifactId>
         <version>${revision}</version>
     </parent>
-    <packaging>pom</packaging>
-    <modules>
-        <module>data-jdbc</module>
-        <module>data-cache</module>
-        <module>springboot-test</module>
-        <module>web-springmvc</module>
-        <module>xyz-test</module>
-    </modules>
-    <groupId>com.kuoyio.component</groupId>
-    <artifactId>kuoyio-component</artifactId>
+
+    <artifactId>xyz-test</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -26,8 +18,8 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>com.kuoyio</groupId>
-            <artifactId>kuoyio-core</artifactId>
+            <groupId>com.kuoyio.component</groupId>
+            <artifactId>web-springmvc</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

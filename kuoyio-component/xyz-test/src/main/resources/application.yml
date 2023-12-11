@@ -1,0 +1,9 @@
+kuoyio:
+  mvc:
+    path-prefix:
+      - prefix: "app-api"
+        packages:
+          - "com.kuoyio.xyz.**"
+          - "com.kuoyio.xyz1.**"
+      - prefix: "test-api"
+        packages: "com.kuoyio.xyz.**"
