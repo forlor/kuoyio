@@ -13,8 +13,9 @@
         <module>data-jdbc</module>
         <module>data-cache</module>
         <module>springboot-test</module>
-        <module>web-springmvc</module>
+        <module>web-mvc</module>
         <module>xyz-test</module>
+        <module>web-reactive</module>
     </modules>
     <groupId>com.kuoyio.component</groupId>
     <artifactId>kuoyio-component</artifactId>

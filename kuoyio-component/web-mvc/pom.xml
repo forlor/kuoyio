@@ -9,7 +9,7 @@
         <version>${revision}</version>
     </parent>
 
-    <artifactId>web-springmvc</artifactId>
+    <artifactId>web-mvc</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
