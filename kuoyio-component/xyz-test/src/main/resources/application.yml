@@ -12,10 +12,13 @@ kuoyio:
     jdbc:
       basePackages: com.kuoyio.component.**.repository
   datasource:
-    primary:
-      username: master
-    second:
-      username: second
+    primary: one
+    multiple:
+      one:
+        username: one
+        auto-commit: false
+      two:
+        username: two
 spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
