@@ -7,3 +7,25 @@ kuoyio:
           - "com.kuoyio.xyz1.**"
       - prefix: "test-api"
         packages: "com.kuoyio.xyz.**"
+
+  data:
+    jdbc:
+      basePackages: com.kuoyio.component.**.repository
+  datasource:
+    primary:
+      username: master
+    second:
+      username: second
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: xyz
+    password: ROOT950318root!
+    url: jdbc:mariadb://www.wuyidajinyinhua.online:43103/xyz?characterEncoding=utf-8&useSSL=false&useTimezone=true
+    hikari:
+      auto-commit: false
+logging:
+  level:
+    org:
+      springframework:
+        jdbc: DEBUG

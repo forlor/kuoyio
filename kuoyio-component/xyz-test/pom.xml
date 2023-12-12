@@ -22,5 +22,14 @@
             <artifactId>web-mvc</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.kuoyio.component</groupId>
+            <artifactId>data-jdbc</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mariadb.jdbc</groupId>
+            <artifactId>mariadb-java-client</artifactId>
+        </dependency>
     </dependencies>
 </project>
