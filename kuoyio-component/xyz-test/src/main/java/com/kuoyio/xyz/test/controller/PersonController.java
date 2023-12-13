@@ -23,6 +23,6 @@ public class PersonController {
     @GetMapping("/uid")
     public String uid() throws Throwable {
         jdbcTemplate.execute("select 1");
-        throw new Throwable();
+        return UUID.randomUUID().toString();
     }
 }

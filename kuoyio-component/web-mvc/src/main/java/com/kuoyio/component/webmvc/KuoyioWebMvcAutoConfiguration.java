@@ -4,6 +4,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.http.server.PathContainer;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
+import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.util.pattern.PathPatternParser;
 
@@ -41,5 +42,6 @@ public class KuoyioWebMvcAutoConfiguration implements WebMvcConfigurer {
         }
 
     }
+
 
 }
