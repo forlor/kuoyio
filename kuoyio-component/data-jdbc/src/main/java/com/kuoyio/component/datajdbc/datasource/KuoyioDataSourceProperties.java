@@ -22,10 +22,15 @@ public class KuoyioDataSourceProperties {
     private String primary = "master";
     /**
      * 数据源类型，默认使用{@link com.zaxxer.hikari.HikariDataSource}
-     * 若multiple里面单个数据源没有设置数据源类型，将使用该数据源类型。
+     * 若multiple里面单个数据源设置了type属性，对应的数据源构建的时候则会使用对应数据源配置里面的type
      */
     @NonNull
     private String type = HIKARI_CLASS_PATH;
+    /**
+     * 多数据源配置信息
+     * key为路由标识
+     * value可根据指定的type所具有的属性来配置数据源信息
+     */
     private Map<String, Object> multiple;
 
     @NonNull

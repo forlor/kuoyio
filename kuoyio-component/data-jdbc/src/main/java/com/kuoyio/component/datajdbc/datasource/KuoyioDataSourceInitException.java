@@ -4,6 +4,8 @@ import com.kuoyio.core.exception.BaseException;
 
 
 /**
+ * 数据源构建初始化exception
+ *
  * @author xyz
  * @since 1.0
  */

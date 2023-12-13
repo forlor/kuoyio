@@ -24,7 +24,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @AutoConfigureBefore(DataSourceAutoConfiguration.class)
 @Import(KuoyioJdbcAutoConfiguration.KuoyioDataSourceConfiguration.class)
 public class KuoyioJdbcAutoConfiguration {
-
+    /**
+     * 激活KuoyioDataSourceConfig配置
+     */
     @Configuration(proxyBeanMethods = false)
     @ConditionalOnProperty(KuoyioConstant.KUOYIO + ".datasource.primary")
     @Import({KuoyioDataSourceConfig.class})
