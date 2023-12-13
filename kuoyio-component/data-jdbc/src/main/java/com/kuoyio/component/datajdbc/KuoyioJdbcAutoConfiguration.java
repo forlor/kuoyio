@@ -1,5 +1,6 @@
 package com.kuoyio.component.datajdbc;
 
+import com.kuoyio.component.datajdbc.datasource.DataSourceRouteAspect;
 import com.kuoyio.component.datajdbc.datasource.KuoyioDataSourceConfig;
 import com.kuoyio.component.datajdbc.datasource.KuoyioDataSourceProperties;
 import com.kuoyio.core.constant.KuoyioConstant;
@@ -9,7 +10,6 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.data.jdbc.repository.config.EnableJdbcAuditing;
@@ -29,7 +29,7 @@ public class KuoyioJdbcAutoConfiguration {
      */
     @Configuration(proxyBeanMethods = false)
     @ConditionalOnProperty(KuoyioConstant.KUOYIO + ".datasource.primary")
-    @Import({KuoyioDataSourceConfig.class})
+    @Import({KuoyioDataSourceConfig.class, DataSourceRouteAspect.class})
     @EnableConfigurationProperties(KuoyioDataSourceProperties.class)
     protected static class KuoyioDataSourceConfiguration {
 

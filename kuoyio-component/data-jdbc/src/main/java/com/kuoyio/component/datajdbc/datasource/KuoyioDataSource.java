@@ -2,8 +2,7 @@ package com.kuoyio.component.datajdbc.datasource;
 
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 import org.springframework.lang.Nullable;
-
-import java.util.List;
+import org.springframework.util.StringUtils;
 
 /**
  * 数据源
@@ -13,12 +12,14 @@ import java.util.List;
  * @since 1.0
  */
 public class KuoyioDataSource extends AbstractRoutingDataSource {
-    private List<Object> propertis;
 
     @Nullable
     @Override
     protected Object determineCurrentLookupKey() {
-
-        return null;
+        String dynamicDataSourceKey = DynamicDataSourceHolder.getDynamicDataSourceKey();
+        if (StringUtils.hasText(dynamicDataSourceKey)) {
+           return getResolvedDataSources().get(dynamicDataSourceKey);
+        }
+        return getResolvedDefaultDataSource();
     }
 }

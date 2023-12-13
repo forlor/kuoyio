@@ -1,5 +1,6 @@
 package com.kuoyio.xyz.test.controller;
 
+import com.kuoyio.component.datajdbc.datasource.DataSourceTarget;
 import jakarta.annotation.Resource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,9 +19,10 @@ import java.util.logging.Logger;
 public class PersonController {
     @Resource
     private JdbcTemplate jdbcTemplate;
+
     @GetMapping("/uid")
-    public String uid(){
+    public String uid() throws Throwable {
         jdbcTemplate.execute("select 1");
-        return UUID.randomUUID().toString();
+        throw new Throwable();
     }
 }
