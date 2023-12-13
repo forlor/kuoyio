@@ -5,7 +5,7 @@ package com.kuoyio.core.exception;
  *
  * @author fulan.zjf 2017年10月22日 上午12:00:39
  */
- abstract class BaseException extends RuntimeException {
+ public abstract class BaseException extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
 

@@ -12,21 +12,26 @@ kuoyio:
     jdbc:
       basePackages: com.kuoyio.component.**.repository
   datasource:
-    primary: one
+    primary: master
     multiple:
-      one:
-        username: one
-        auto-commit: false
-      two:
-        username: two
-spring:
-  datasource:
-    driver-class-name: org.mariadb.jdbc.Driver
-    username: xyz
-    password: ROOT950318root!
-    url: jdbc:mariadb://www.wuyidajinyinhua.online:43103/xyz?characterEncoding=utf-8&useSSL=false&useTimezone=true
-    hikari:
-      auto-commit: false
+      master:
+        driver-class-name: org.mariadb.jdbc.Driver
+        username: xyz
+        password: ROOT950318root!
+        jdbc-url: jdbc:mariadb://www.wuyidajinyinhua.online:43103/xyz?characterEncoding=utf-8&useSSL=false&useTimezone=true
+      other:
+        driver-class-name: org.mariadb.jdbc.Driver
+        username: xyz
+        password: ROOT950318root!
+        jdbc-url: jdbc:mariadb://www.wuyidajinyinhua.online:43103/xyz?characterEncoding=utf-8&useSSL=false&useTimezone=true
+#spring:
+#  datasource:
+#    driver-class-name: org.mariadb.jdbc.Driver
+#    username: xyz
+#    password: ROOT950318root!
+#    url: jdbc:mariadb://www.wuyidajinyinhua.online:43103/xyz?characterEncoding=utf-8&useSSL=false&useTimezone=true
+#    hikari:
+#      auto-commit: false
 logging:
   level:
     org:

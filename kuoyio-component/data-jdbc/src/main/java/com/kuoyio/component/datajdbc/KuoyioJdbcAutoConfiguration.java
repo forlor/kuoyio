@@ -5,6 +5,7 @@ import com.kuoyio.component.datajdbc.datasource.KuoyioDataSourceProperties;
 import com.kuoyio.core.constant.KuoyioConstant;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -25,7 +26,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class KuoyioJdbcAutoConfiguration {
 
     @Configuration(proxyBeanMethods = false)
-  //  @ConditionalOnProperty(KuoyioConstant.KUOYIO + ".datasource.primary.*")
+    @ConditionalOnProperty(KuoyioConstant.KUOYIO + ".datasource.primary")
     @Import({KuoyioDataSourceConfig.class})
     @EnableConfigurationProperties(KuoyioDataSourceProperties.class)
     protected static class KuoyioDataSourceConfiguration {
