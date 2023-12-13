@@ -11,6 +11,9 @@ import com.kuoyio.core.exception.BaseException;
  */
 
 public class KuoyioDataSourceInitException extends BaseException {
+    public KuoyioDataSourceInitException(String errMessage) {
+        super(errMessage);
+    }
 
     public KuoyioDataSourceInitException(String errMessage, Throwable e) {
         super(errMessage, e);

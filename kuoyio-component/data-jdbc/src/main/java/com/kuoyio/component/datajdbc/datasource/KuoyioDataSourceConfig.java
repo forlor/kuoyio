@@ -44,7 +44,7 @@ public class KuoyioDataSourceConfig implements EnvironmentAware {
     public DataSource dataSource() {
         final Map<String, Object> multipleDataSourceProperties = dataSourceProperties.getMultiple();
         if (CollectionUtils.isEmpty(multipleDataSourceProperties)) {
-            throw new RuntimeException();
+            throw new KuoyioDataSourceInitException("multipleDataSourceProperties must not be empty");
         }
         KuoyioDataSource dataSource = new KuoyioDataSource();
         Map<Object, Object> dataSourceMap = new HashMap<>(multipleDataSourceProperties.size());
